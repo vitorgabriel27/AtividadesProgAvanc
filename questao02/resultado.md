@@ -1,4 +1,4 @@
-#Resultado da questão 2 
+##Resultado da questão 2 
 
 Foi impresso nessa questão os seguintes resultados:
     
