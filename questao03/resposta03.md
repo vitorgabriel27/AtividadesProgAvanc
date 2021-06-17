@@ -2,15 +2,17 @@
 
 Das expressões abaixo:
 
-`
-    p = i
+```
+    p = i;
     q = &j;
     p = &*&i;
     i = (*&)j;
     i = *&j;
     i = *&*&j;
     q = *p;
-    i = (*p)++ + *q;`
+    i = (*p)++ + *q;
+    
+```
 
 As expressões ilegais são: 
 
