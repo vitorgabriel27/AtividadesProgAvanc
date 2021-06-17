@@ -3,7 +3,7 @@
 Foi impresso nessa questão os seguintes resultados:
     
    - No primeiro printf(%x, p) = 61ff1c, o programa imprime o endereço na memoria de i que é a variavel 
-    em que o meu ponteiro "p" aponta;
+    em que o meu ponteiro "p" aponta, caso o endereço de memoria fosse 4094 o programa me imprimiria 4094;
 
    - No segundo printf(%d, *p+2) = 7, é impresso o resultado da expressão 5 + 2, *p = i = 5;
 
