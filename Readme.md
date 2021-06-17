@@ -3,3 +3,7 @@
  ### Participantes:
  
  Vitor Gabriel da Silva Alves, 20180135702. 
+ 
+ 
+ 
+ ![WalkingInC](walking_in_c.gif)
