@@ -48,8 +48,8 @@ int main()
     vetor[2] = 27;
     p4 = vetor;
     idade = *p4;
-     printf("%d \n", idade);
-     
+    printf("%d \n", idade);
+    
      /* (i) */
     p5 = p4 + 1;
     idade = *p5;
