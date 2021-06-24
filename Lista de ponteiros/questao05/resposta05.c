@@ -12,4 +12,6 @@ int main(void){
         printf(" &vet[%d] = %X",i, &vet[i]);
         printf(" (f + %d) = %X",i, f+i);
     }
+    
+    return 0;
 }
