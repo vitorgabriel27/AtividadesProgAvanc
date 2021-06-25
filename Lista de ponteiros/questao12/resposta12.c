@@ -1,44 +1,25 @@
 #include<stdio.h>
 
 
-// definimos um tipo e esse tipo é um ponteiro que aponta para uma função do tipo float e recebe um float e um int
-typedef int (*geometria)(int);
+typedef float (*operacao)(float,int);
 
-//funções que serão chamadas através da utilização dos ponteiros
-
- int triangulo(int a){
-     return printf("é um triangulo");
+//-----------------------------------------------------------------------
+ float multiplica(float a, int b){
+     return a*b;
  }
- int retangulo(int a){
-     return printf("é um retangulo");
- }
- int pentagono(int a){
-     return printf("é um pentagono");
+ float divide(float a, int b){
+     return a/b;
  }
 
-//agora vamos criar a função que chama o as funções através do ponteiro que definimos
-int forma(int l, geometria p){
-    return p(l);
+//-----------------------------------------------------------------------
+float opera(float a, int b, operacao p){
+    return op(a,b);
 }
-
-//agora vamos criar nossa função main
-
+//-----------------------------------------------------------------------
 int main(){
-    
-    int l, *pl = &l;
+    float a = 3.7;
+    int b = 6;
 
-    scanf("Digite o numero de lados da sua forma: %i", l);
-    printf("%d",l);
-
-    if(l == 3){
-        printf("A forma geometrica eh: %d", forma(l,triangulo));
-    }
-    /*else{
-        if(l == 4){
-            printf("A forma geometrica eh: ", forma(l,retangulo));
-        }else{
-            printf("A forma geometrica eh: ", forma(l,pentagono));
-        }
-    }*/
-   return 0;
+    printf("O valor %f multiplicado por %d é igual a %f",a,b,opera(a,b,multiplica));
+    printf("O valor %f dividido por %d é igual a %f",a,b,opera(a,b,divide));
 }
