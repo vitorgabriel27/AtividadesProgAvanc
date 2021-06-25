@@ -1,4 +1,4 @@
-## Resposta da Questão 11
+## Resposta da Questão 12
 
 ### O que é um ponteiro para função?
 
