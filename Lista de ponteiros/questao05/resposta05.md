@@ -14,4 +14,4 @@ contador/valor/valor/endereco/endereco
  ~~~
  O que está acontecendo nesta execução é que a cada o iteração do comando de repetição for, o valor exibido em `vet[i]` é o valor guardado naquela posição do vetor, já o segundo valor apresentado resultado de `*(f + i)` tambem é o esperado pois o ponteiro esta guardando o endereço e o valor derreferencia do vetor.
 
- Logo após, os comandos `&vet[i]` e `(f + i)` nos mostram o endereço de memoria em que o vetor está guardando as informações, como o ponteiro f aponta para o vetor o valor mostrado é o mesmo endereço de memoria, que como mostrado conforme andamos no vetor em cada posição o endereço tambem anda 1 casa que tem o valor igual 4 bits, por isso o endereço cresce de 4 em 4.
+ Logo após, os comandos `&vet[i]` e `(f + i)` nos mostram o endereço de memoria em que o vetor está guardando as informações, como o ponteiro f aponta para o vetor o valor mostrado é o mesmo endereço de memoria, que como mostrado conforme andamos no vetor em cada posição o endereço tambem anda 1 casa que tem o valor igual 4 bytes, por isso o endereço cresce de 4 em 4.

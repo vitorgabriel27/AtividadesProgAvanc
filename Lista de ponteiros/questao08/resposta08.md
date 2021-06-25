@@ -21,4 +21,4 @@ O programa acima imprime na tela os valores armazenados dentro do meu array, ao 
   }
 }
 ~~~
-Já esse programa imprime, em hexadecimal, o endereço de memória de cada posição do meu vetor, os endereços impressos ao executar o código na minha máquina foram, `61FF10 61FF14 61FF18`, o que também nos mostra que cada espaço ocupa 4 bits na memoria.
+Já esse programa imprime, em hexadecimal, o endereço de memória de cada posição do meu vetor, os endereços impressos ao executar o código na minha máquina foram, `61FF10 61FF14 61FF18`, o que também nos mostra que cada espaço ocupa 4 bytes na memoria.
