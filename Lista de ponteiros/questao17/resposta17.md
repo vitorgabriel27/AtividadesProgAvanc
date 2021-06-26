@@ -1,6 +1,6 @@
 ## Resposta da Questão 17
 
-Para implementar uma função q faz a soma de dois vetores, foi elabora o seguite código:
+Para implementar uma função que faz a soma de dois vetores, foi elabora o seguite código:
 
 ~~~c
 //a função que soma vetores como pedido na questão recebe os seguintes parametros
