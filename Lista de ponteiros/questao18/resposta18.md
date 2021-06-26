@@ -21,7 +21,7 @@ float **alocaMat(float **m, int nl,int nc){
 
 ~~~
 
-Após esse passo criei as funções que escreve e imprime os valores da minha matriz:
+Após esse passo criei as funções `matRecebe()` e `imprimeMat()`, que escreve e  imprime os valores da minha matriz:
 
 ~~~c
 void matRecebe(float **m, int nl,int nc){
