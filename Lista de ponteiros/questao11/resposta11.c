@@ -17,5 +17,3 @@ int main(void)
     return 0;
 }
 
-float aloha[10], coisas[10][5], *pf, value = 2.2;
-int i=3;
