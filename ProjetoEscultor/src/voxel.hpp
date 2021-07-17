@@ -3,8 +3,8 @@
 
 struct Voxel
 {
-    float r, g, b, a; // Colors red, green and blue, the parameter a represents transparency
-    bool isOn;//Included or Not
+    float r, g, b, a; // Colors red, green and blue, and the parameter a represents transparency
+    bool isOn; //Included or Not
 };
 
 #endif
