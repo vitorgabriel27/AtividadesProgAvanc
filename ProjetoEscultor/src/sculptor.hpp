@@ -4,7 +4,7 @@
 
 class Sculptor {
     protected:
-        Voxel ***v;// 3D matrix
+        Voxel ***vxl;// 3D matrix
         int nx,ny,nz; // Dimensions
         float r,g,b,a; // Current drawing color
     public:
