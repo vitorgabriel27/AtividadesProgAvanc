@@ -6,6 +6,8 @@
 #include <fstream>
 #include <cmath>
 
+using namespace std;
+
 // Definição do construtor da classe Sculptor
 Sculptor::Sculptor(int _nx, int _ny, int _nz){
 
@@ -83,7 +85,7 @@ void Sculptor::cutVoxel(int x, int y, int z){
 //definição da função putBox
 void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1){
 
-    //vxlerifica se a minha Box Está dentro da dimensão
+    //verifica se a minha Box Está dentro da dimensão
     x0 = (x0 < 0) ? 0 : x0;
     x1 = (x1 > this->nx) ? this->nx : x1;
     y0 = (y0 < 0) ? 0 : y0;
@@ -91,7 +93,7 @@ void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1){
     z0 = (z0 < 0) ? 0 : z0;
     z1 = (z1 > this->nz) ? this->nz : z1;
 
-    //atribui o vxloxel dentro dos intervxlalos [x0,x1],[y0,y1] e [z0,z1]
+    //atribui o voxel dentro dos intervalos [x0,x1],[y0,y1] e [z0,z1]
     for(int i = x0; i < x1; i++){
         for(int j = y0; j < y1; j++){
             for(int k = z0; k< z1; k++){
@@ -105,8 +107,7 @@ void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1){
 //definiçao cutBox
 void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1){
 
-
-    //Retira a Box da minha matrix
+    //Desativa os voxels da Box da minha matrix
     for(int i = x0; i < x1; i++){
         for(int j = y0; j < y1; j++){
             for(int k = z0; k< z1; k++){
@@ -117,3 +118,77 @@ void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1){
     }
 }
 
+//Definição minha função putSphere
+void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius){
+    //Cria minha esfera
+    putEllipsoid(xcenter,ycenter,zcenter,radius,radius,radius);
+}
+
+//Definição minha função putSphere
+void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius){
+   
+    cutEllipsoid(xcenter,ycenter,zcenter,radius,radius,radius);
+}
+
+void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz){
+
+    //verifica se os valores do elipsóide estão dentro da dimensão
+    int x0 = (xcenter - rx < 0) ? 0 : xcenter - rx;
+    int x1 = (xcenter + rx > this->nx) ? this->nx : xcenter + rx;
+    int y0 = (ycenter - ry < 0) ? 0 : ycenter - ry;
+    int y1 = (ycenter + ry > this->ny) ? this->ny : ycenter + ry;
+    int z0 = (zcenter - rz < 0) ? 0 : zcenter - rz;
+    int z1 = (zcenter + rz > this->nz) ? this->nz : zcenter + rz;
+
+     for(int i = x0; i < x1; i++){
+        for(int j = y0; j < y1; j++){
+            for(int k = z0; k< z1; k++){
+
+                if(pow((i - xcenter)/rx, 2) + pow((j - ycenter)/ry, 2) + pow((k - zcenter)/rz, 2) == 1){
+                    
+                    this->putVoxel(i,j,k);
+                }
+
+                
+            }
+        }
+    }
+
+
+}
+
+void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz){
+
+    //verifica se os valores do elipsóide estão dentro da dimensão
+    int x0 = (xcenter - rx < 0) ? 0 : xcenter - rx;
+    int x1 = (xcenter + rx > this->nx) ? this->nx : xcenter + rx;
+    int y0 = (ycenter - ry < 0) ? 0 : ycenter - ry;
+    int y1 = (ycenter + ry > this->ny) ? this->ny : ycenter + ry;
+    int z0 = (zcenter - rz < 0) ? 0 : zcenter - rz;
+    int z1 = (zcenter + rz > this->nz) ? this->nz : zcenter + rz;
+
+     for(int i = x0; i < x1; i++){
+        for(int j = y0; j < y1; j++){
+            for(int k = z0; k< z1; k++){
+
+                if(pow((i - xcenter)/rx, 2) + pow((j - ycenter)/ry, 2) + pow((k - zcenter)/rz, 2) == 1 ){
+                    
+                    this->cutVoxel(i,j,k);
+                }
+
+                
+            }
+        }
+    }
+
+}
+
+void Sculptor::writeOFF(const char *filename){
+    
+    ofstream file(filename);
+
+    if(!file.is_open()){
+
+        cout << "Error while open this file: " << filename << endl;
+    }
+}
