@@ -32,7 +32,7 @@ Sculptor::Sculptor(int _nx, int _ny, int _nz){
                     this->vxl[i][j][k].g = 0.0;
                     this->vxl[i][j][k].b = 0.0;
                     this->vxl[i][j][k].a = 0.0;
-                    this->vxl[i][j][k].isOn = true;
+                    this->vxl[i][j][k].isOn = false;
                  
             }
         }
