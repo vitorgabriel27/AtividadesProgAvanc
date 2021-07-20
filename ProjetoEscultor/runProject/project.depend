@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1626818044 source:c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\saporrav2.0\sculptor.cpp
+	<cstdlib>
+	<iostream>
+	"sculptor.hpp"
+	<vector>
+	<fstream>
+	<cmath>
+
+1626789040 c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\saporrav2.0\sculptor.hpp
+	"voxel.hpp"
+
+1626559857 c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\saporrav2.0\voxel.hpp
+
+1626817899 source:c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\saporrav2.0\main.cpp
+	<iostream>
+	"sculptor.hpp"
+

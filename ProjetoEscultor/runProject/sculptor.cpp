@@ -40,7 +40,7 @@ Sculptor::Sculptor(int _nx, int _ny, int _nz){
 
 }
 
-//definição do destrutor da minha classe Sculptor
+//definição do destrutor da classe Sculptor
 Sculptor::~Sculptor(){
 
     for(int i = 0; i < nx; i++ ){
@@ -143,7 +143,7 @@ void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
         for(int j = y0; j < y1; j++){
             for(int k = z0; k< z1; k++){
 
-                if(pow((i - xcenter)/rx, 2) + pow((j - ycenter)/ry, 2) + pow((k - zcenter)/rz, 2) == 1){
+                if(pow(i - xcenter, 2) / pow(rx, 2) + pow(j - ycenter, 2) / pow(ry, 2) + pow(k - zcenter, 2) / pow(rz, 2) < 1){
 
                     this->putVoxel(i,j,k);
                 }
@@ -170,7 +170,7 @@ void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
         for(int j = y0; j < y1; j++){
             for(int k = z0; k< z1; k++){
 
-                if(pow(((i - xcenter)/rx), 2) + pow(((j - ycenter)/ry), 2) + pow(((k - zcenter)/rz), 2) == 1 ){
+                if(pow(i - xcenter, 2) / pow(rx, 2) + pow(j - ycenter, 2) / pow(ry, 2) + pow(k - zcenter, 2) / pow(rz, 2) < 1 ){
 
                     this->cutVoxel(i,j,k);
                 }
@@ -243,12 +243,12 @@ void Sculptor::writeOFF(const char *filename){
             {
                 if (this->vxl[i][j][k].isOn)
                 {
-                    myFile << "4 " << contVOn * 8 + 0 << " " << contVOn * 8 + 3 << " " << contVOn * 8 + 2 << " " << contVOn * 8 + 1 << " " << this->vxl[i][j][k].r << " " << this->vxl[i][j][k].g << " " << this->vxl[i][j][k].b << " " << this->vxl[i][j][k].a << std::endl;
-                    myFile << "4 " << contVOn * 8 + 4 << " " << contVOn * 8 + 5 << " " << contVOn * 8 + 6 << " " << contVOn * 8 + 7 << " " << this->vxl[i][j][k].r << " " << this->vxl[i][j][k].g << " " << this->vxl[i][j][k].b << " " << this->vxl[i][j][k].a << std::endl;
-                    myFile << "4 " << contVOn * 8 + 0 << " " << contVOn * 8 + 1 << " " << contVOn * 8 + 5 << " " << contVOn * 8 + 4 << " " << this->vxl[i][j][k].r << " " << this->vxl[i][j][k].g << " " << this->vxl[i][j][k].b << " " << this->vxl[i][j][k].a << std::endl;
-                    myFile << "4 " << contVOn * 8 + 0 << " " << contVOn * 8 + 4 << " " << contVOn * 8 + 7 << " " << contVOn * 8 + 3 << " " << this->vxl[i][j][k].r << " " << this->vxl[i][j][k].g << " " << this->vxl[i][j][k].b << " " << this->vxl[i][j][k].a << std::endl;
-                    myFile << "4 " << contVOn * 8 + 3 << " " << contVOn * 8 + 7 << " " << contVOn * 8 + 6 << " " << contVOn * 8 + 2 << " " << this->vxl[i][j][k].r << " " << this->vxl[i][j][k].g << " " << this->vxl[i][j][k].b << " " << this->vxl[i][j][k].a << std::endl;
-                    myFile << "4 " << contVOn * 8 + 1 << " " << contVOn * 8 + 2 << " " << contVOn * 8 + 6 << " " << contVOn * 8 + 5 << " " << this->vxl[i][j][k].r << " " << this->vxl[i][j][k].g << " " << this->vxl[i][j][k].b << " " << this->vxl[i][j][k].a << std::endl;
+                    myFile << "4 " << contVOn * 8 + 0 << " " << contVOn * 8 + 3 << " " << contVOn * 8 + 2 << " " << contVOn * 8 + 1 << " " << this->vxl[i][j][k].r << ".0 " << this->vxl[i][j][k].g << ".0 " << this->vxl[i][j][k].b << ".0 " << this->vxl[i][j][k].a << ".0" << std::endl;
+                    myFile << "4 " << contVOn * 8 + 4 << " " << contVOn * 8 + 5 << " " << contVOn * 8 + 6 << " " << contVOn * 8 + 7 << " " << this->vxl[i][j][k].r << ".0 " << this->vxl[i][j][k].g << ".0 " << this->vxl[i][j][k].b << ".0 " << this->vxl[i][j][k].a << ".0" << std::endl;
+                    myFile << "4 " << contVOn * 8 + 0 << " " << contVOn * 8 + 1 << " " << contVOn * 8 + 5 << " " << contVOn * 8 + 4 << " " << this->vxl[i][j][k].r << ".0 " << this->vxl[i][j][k].g << ".0 " << this->vxl[i][j][k].b << ".0 " << this->vxl[i][j][k].a << ".0" << std::endl;
+                    myFile << "4 " << contVOn * 8 + 0 << " " << contVOn * 8 + 4 << " " << contVOn * 8 + 7 << " " << contVOn * 8 + 3 << " " << this->vxl[i][j][k].r << ".0 " << this->vxl[i][j][k].g << ".0 " << this->vxl[i][j][k].b << ".0 " << this->vxl[i][j][k].a << ".0" << std::endl;
+                    myFile << "4 " << contVOn * 8 + 3 << " " << contVOn * 8 + 7 << " " << contVOn * 8 + 6 << " " << contVOn * 8 + 2 << " " << this->vxl[i][j][k].r << ".0 " << this->vxl[i][j][k].g << ".0 " << this->vxl[i][j][k].b << ".0 " << this->vxl[i][j][k].a << ".0" << std::endl;
+                    myFile << "4 " << contVOn * 8 + 1 << " " << contVOn * 8 + 2 << " " << contVOn * 8 + 6 << " " << contVOn * 8 + 5 << " " << this->vxl[i][j][k].r << ".0 " << this->vxl[i][j][k].g << ".0 " << this->vxl[i][j][k].b << ".0 " << this->vxl[i][j][k].a << ".0" << std::endl;
                     contVOn++;
                 }
             }
