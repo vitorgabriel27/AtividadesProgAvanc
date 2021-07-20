@@ -184,14 +184,14 @@ void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
 
 void Sculptor::writeOFF(const char *filename){
 
-    std::ofstream myFile(filename);
-    //Stream starts
+    ofstream myFile(filename);
+    //Inicia o stream
     if (!myFile.is_open())
     {
-        std::cout << "Error while open file: "<< filename << std::endl;
+        cout << "Error while open file: "<< filename << endl;
         exit(1);
     }
-    //Count How many Voxels are on
+    //Conta quantos voxels tem
     int vOn = 0, i, j, k;
     for (i = 0; i < nx; i++)
     {
@@ -208,10 +208,10 @@ void Sculptor::writeOFF(const char *filename){
     }
 
     ////////////////////////////////
-    //(over)Write in the OFF format
+    //(Re)Escreve no Formato OFF ///
     ////////////////////////////////
-    myFile << "OFF" << std::endl;
-    myFile << 8 * vOn << " " << 6 * vOn << " 0" << std::endl;
+    myFile << "OFF" << endl;
+    myFile << 8 * vOn << " " << 6 * vOn << " 0" << endl;
 
     for (i = 0; i < nx; i++)
     {
@@ -222,14 +222,14 @@ void Sculptor::writeOFF(const char *filename){
                 if (this->vxl[i][j][k].isOn)
                 {
                     // mais stream
-                    myFile << i - 0.5 << " " << j + 0.5 << " " << k - 0.5 << std::endl;
-                    myFile << i - 0.5 << " " << j - 0.5 << " " << k - 0.5 << std::endl;
-                    myFile << i + 0.5 << " " << j - 0.5 << " " << k - 0.5 << std::endl;
-                    myFile << i + 0.5 << " " << j + 0.5 << " " << k - 0.5 << std::endl;
-                    myFile << i - 0.5 << " " << j + 0.5 << " " << k + 0.5 << std::endl;
-                    myFile << i - 0.5 << " " << j - 0.5 << " " << k + 0.5 << std::endl;
-                    myFile << i + 0.5 << " " << j - 0.5 << " " << k + 0.5 << std::endl;
-                    myFile << i + 0.5 << " " << j + 0.5 << " " << k + 0.5 << std::endl;
+                    myFile << i - 0.5 << " " << j + 0.5 << " " << k - 0.5 << endl;
+                    myFile << i - 0.5 << " " << j - 0.5 << " " << k - 0.5 << endl;
+                    myFile << i + 0.5 << " " << j - 0.5 << " " << k - 0.5 << endl;
+                    myFile << i + 0.5 << " " << j + 0.5 << " " << k - 0.5 << endl;
+                    myFile << i - 0.5 << " " << j + 0.5 << " " << k + 0.5 << endl;
+                    myFile << i - 0.5 << " " << j - 0.5 << " " << k + 0.5 << endl;
+                    myFile << i + 0.5 << " " << j - 0.5 << " " << k + 0.5 << endl;
+                    myFile << i + 0.5 << " " << j + 0.5 << " " << k + 0.5 << endl;
                 }
             }
         }
@@ -243,17 +243,17 @@ void Sculptor::writeOFF(const char *filename){
             {
                 if (this->vxl[i][j][k].isOn)
                 {
-                    myFile << "4 " << contVOn * 8 + 0 << " " << contVOn * 8 + 3 << " " << contVOn * 8 + 2 << " " << contVOn * 8 + 1 << " " << this->vxl[i][j][k].r << ".0 " << this->vxl[i][j][k].g << ".0 " << this->vxl[i][j][k].b << ".0 " << this->vxl[i][j][k].a << ".0" << std::endl;
-                    myFile << "4 " << contVOn * 8 + 4 << " " << contVOn * 8 + 5 << " " << contVOn * 8 + 6 << " " << contVOn * 8 + 7 << " " << this->vxl[i][j][k].r << ".0 " << this->vxl[i][j][k].g << ".0 " << this->vxl[i][j][k].b << ".0 " << this->vxl[i][j][k].a << ".0" << std::endl;
-                    myFile << "4 " << contVOn * 8 + 0 << " " << contVOn * 8 + 1 << " " << contVOn * 8 + 5 << " " << contVOn * 8 + 4 << " " << this->vxl[i][j][k].r << ".0 " << this->vxl[i][j][k].g << ".0 " << this->vxl[i][j][k].b << ".0 " << this->vxl[i][j][k].a << ".0" << std::endl;
-                    myFile << "4 " << contVOn * 8 + 0 << " " << contVOn * 8 + 4 << " " << contVOn * 8 + 7 << " " << contVOn * 8 + 3 << " " << this->vxl[i][j][k].r << ".0 " << this->vxl[i][j][k].g << ".0 " << this->vxl[i][j][k].b << ".0 " << this->vxl[i][j][k].a << ".0" << std::endl;
-                    myFile << "4 " << contVOn * 8 + 3 << " " << contVOn * 8 + 7 << " " << contVOn * 8 + 6 << " " << contVOn * 8 + 2 << " " << this->vxl[i][j][k].r << ".0 " << this->vxl[i][j][k].g << ".0 " << this->vxl[i][j][k].b << ".0 " << this->vxl[i][j][k].a << ".0" << std::endl;
-                    myFile << "4 " << contVOn * 8 + 1 << " " << contVOn * 8 + 2 << " " << contVOn * 8 + 6 << " " << contVOn * 8 + 5 << " " << this->vxl[i][j][k].r << ".0 " << this->vxl[i][j][k].g << ".0 " << this->vxl[i][j][k].b << ".0 " << this->vxl[i][j][k].a << ".0" << std::endl;
+                    myFile << "4 " << contVOn * 8 + 0 << " " << contVOn * 8 + 3 << " " << contVOn * 8 + 2 << " " << contVOn * 8 + 1 << " " << this->vxl[i][j][k].r << ".0 " << this->vxl[i][j][k].g << ".0 " << this->vxl[i][j][k].b << ".0 " << this->vxl[i][j][k].a << ".0" << endl;
+                    myFile << "4 " << contVOn * 8 + 4 << " " << contVOn * 8 + 5 << " " << contVOn * 8 + 6 << " " << contVOn * 8 + 7 << " " << this->vxl[i][j][k].r << ".0 " << this->vxl[i][j][k].g << ".0 " << this->vxl[i][j][k].b << ".0 " << this->vxl[i][j][k].a << ".0" << endl;
+                    myFile << "4 " << contVOn * 8 + 0 << " " << contVOn * 8 + 1 << " " << contVOn * 8 + 5 << " " << contVOn * 8 + 4 << " " << this->vxl[i][j][k].r << ".0 " << this->vxl[i][j][k].g << ".0 " << this->vxl[i][j][k].b << ".0 " << this->vxl[i][j][k].a << ".0" << endl;
+                    myFile << "4 " << contVOn * 8 + 0 << " " << contVOn * 8 + 4 << " " << contVOn * 8 + 7 << " " << contVOn * 8 + 3 << " " << this->vxl[i][j][k].r << ".0 " << this->vxl[i][j][k].g << ".0 " << this->vxl[i][j][k].b << ".0 " << this->vxl[i][j][k].a << ".0" << endl;
+                    myFile << "4 " << contVOn * 8 + 3 << " " << contVOn * 8 + 7 << " " << contVOn * 8 + 6 << " " << contVOn * 8 + 2 << " " << this->vxl[i][j][k].r << ".0 " << this->vxl[i][j][k].g << ".0 " << this->vxl[i][j][k].b << ".0 " << this->vxl[i][j][k].a << ".0" << endl;
+                    myFile << "4 " << contVOn * 8 + 1 << " " << contVOn * 8 + 2 << " " << contVOn * 8 + 6 << " " << contVOn * 8 + 5 << " " << this->vxl[i][j][k].r << ".0 " << this->vxl[i][j][k].g << ".0 " << this->vxl[i][j][k].b << ".0 " << this->vxl[i][j][k].a << ".0" << endl;
                     contVOn++;
                 }
             }
         }
     }
-    // Close the file
+    // fecha o arquivo
     myFile.close();
 }
