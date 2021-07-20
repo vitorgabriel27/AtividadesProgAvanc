@@ -1,6 +1,4 @@
 #include<iostream>
-#include<vector>
-#include<fstream>
 #include "sculptor.hpp"
 
 using namespace std;
@@ -17,7 +15,8 @@ int main(){
     Sculptor teste(10,10,10);
     teste.setColor(1,0,0,1);
     teste.putVoxel(1,1,1);
-
+    
+    teste.writeOFF((char*)"teste.off");
     return 0;
 
 }
