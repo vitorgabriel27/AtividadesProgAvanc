@@ -26,7 +26,7 @@ Sculptor::Sculptor(int _nx, int _ny, int _nz){
         for(int j = 0; j < _ny; j++){
 
             vxl[i][j] = new Voxel [_nz];
-            for(int k = 0; j < _nz; j++ ){
+            for(int k = 0; k < _nz; k++){
 
                     this->vxl[i][j][k].r = 0.0;
                     this->vxl[i][j][k].g = 0.0;
@@ -170,7 +170,7 @@ void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
         for(int j = y0; j < y1; j++){
             for(int k = z0; k< z1; k++){
 
-                if(pow((i - xcenter)/rx, 2) + pow((j - ycenter)/ry, 2) + pow((k - zcenter)/rz, 2) == 1 ){
+                if(pow(((i - xcenter)/rx), 2) + pow(((j - ycenter)/ry), 2) + pow(((k - zcenter)/rz), 2) == 1 ){
                     
                     this->cutVoxel(i,j,k);
                 }
