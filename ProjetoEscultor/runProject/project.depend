@@ -16,3 +16,20 @@
 	<iostream>
 	"sculptor.hpp"
 
+1626923712 source:c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\runproject\main.cpp
+	<iostream>
+	"sculptor.hpp"
+
+1626789040 c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\runproject\sculptor.hpp
+	"voxel.hpp"
+
+1626559857 c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\runproject\voxel.hpp
+
+1626820554 source:c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\runproject\sculptor.cpp
+	<cstdlib>
+	<iostream>
+	"sculptor.hpp"
+	<vector>
+	<fstream>
+	<cmath>
+
