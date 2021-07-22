@@ -1,30 +1,4 @@
 # depslib dependency file v1.0
-1626818044 source:c:\users\vitor\onedrive\ï¿½rea de trabalho\vitor t\2021.1\programaï¿½ï¿½o avanï¿½ada\atividadesprogavanc\projetoescultor\runproject\sculptor.cpp
-	<cstdlib>
-	<iostream>
-	"sculptor.hpp"
-	<vector>
-	<fstream>
-	<cmath>
-
-1626789040 c:\users\vitor\onedrive\ï¿½rea de trabalho\vitor t\2021.1\programaï¿½ï¿½o avanï¿½ada\atividadesprogavanc\projetoescultor\runproject\sculptor.hpp
-	"voxel.hpp"
-
-1626559857 c:\users\vitor\onedrive\ï¿½rea de trabalho\vitor t\2021.1\programaï¿½ï¿½o avanï¿½ada\atividadesprogavanc\projetoescultor\runproject\voxel.hpp
-
-1626817899 source:c:\users\vitor\onedrive\ï¿½rea de trabalho\vitor t\2021.1\programaï¿½ï¿½o avanï¿½ada\atividadesprogavanc\projetoescultor\runproject\main.cpp
-	<iostream>
-	"sculptor.hpp"
-
-1626957581 source:c:\users\vitor\onedrive\ï¿½rea de trabalho\vitor t\2021.1\programaï¿½ï¿½o avanï¿½ada\atividadesprogavanc\projetoescultor\runproject\main.cpp
-	<iostream>
-	"sculptor.hpp"
-
-1626789040 c:\users\vitor\onedrive\ï¿½rea de trabalho\vitor t\2021.1\programaï¿½ï¿½o avanï¿½ada\atividadesprogavanc\projetoescultor\runproject\sculptor.hpp
-	"voxel.hpp"
-
-1626559857 c:\users\vitor\onedrive\ï¿½rea de trabalho\vitor t\2021.1\programaï¿½ï¿½o avanï¿½ada\atividadesprogavanc\projetoescultor\runproject\voxel.hpp
-
 1626820554 source:c:\users\vitor\onedrive\ï¿½rea de trabalho\vitor t\2021.1\programaï¿½ï¿½o avanï¿½ada\atividadesprogavanc\projetoescultor\runproject\sculptor.cpp
 	<cstdlib>
 	<iostream>
@@ -32,4 +6,35 @@
 	<vector>
 	<fstream>
 	<cmath>
+	<cstdlib>
+	<iostream>
+	"sculptor.hpp"
+	<vector>
+	<fstream>
+	<cmath>
+
+1626789040 c:\users\vitor\onedrive\ï¿½rea de trabalho\vitor t\2021.1\programaï¿½ï¿½o avanï¿½ada\atividadesprogavanc\projetoescultor\runproject\sculptor.hpp
+	"voxel.hpp"
+	"voxel.hpp"
+
+1626559857 c:\users\vitor\onedrive\ï¿½rea de trabalho\vitor t\2021.1\programaï¿½ï¿½o avanï¿½ada\atividadesprogavanc\projetoescultor\runproject\voxel.hpp
+
+1626957581 source:c:\users\vitor\onedrive\ï¿½rea de trabalho\vitor t\2021.1\programaï¿½ï¿½o avanï¿½ada\atividadesprogavanc\projetoescultor\runproject\main.cpp
+	<iostream>
+	"sculptor.hpp"
+	<iostream>
+	"sculptor.hpp"
+
+1626820554 source:c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\runproject\sculptor.cpp
+	<cstdlib>
+	<iostream>
+	"sculptor.hpp"
+	<vector>
+	<fstream>
+	<cmath>
+
+1626789040 c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\runproject\sculptor.hpp
+	"voxel.hpp"
+
+1626559857 c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\runproject\voxel.hpp
 

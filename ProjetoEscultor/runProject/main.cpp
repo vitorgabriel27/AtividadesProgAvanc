@@ -195,11 +195,13 @@ int main(){
     astronauta.cutBox(3,11,5,6,6,7);
     astronauta.cutBox(3,11,13,14,6,7);
     astronauta.putBox(5,6,14,18,3,4);
-    astronauta.putBox(7,8,14,24,3,4);
+    astronauta.putBox(7,8,14,22,3,4);
+    astronauta.putBox(5,6,18,19,3,5);
+    astronauta.putBox(7,8,21,22,3,5);
 
     astronauta.setColor(0.3,0.3,0.3,1.0);
-    astronauta.putVoxel(5,18,3);
-    astronauta.putVoxel(7,24,3);
+    astronauta.putVoxel(5,18,5);
+    astronauta.putVoxel(7,21,5);
 
 
     astronauta.writeOFF("astronauta.off");
