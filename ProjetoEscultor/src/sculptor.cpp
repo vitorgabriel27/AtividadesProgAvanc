@@ -76,7 +76,7 @@ void Sculptor::putVoxel(int x, int y, int z){
 
 }
 
-//definição de cutvxloxel
+//definição de cutvoxel
 void Sculptor::cutVoxel(int x, int y, int z){
     this->vxl[x][y][z].isOn = false;
 }

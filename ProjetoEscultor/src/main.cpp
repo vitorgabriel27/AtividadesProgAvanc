@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
 
-    /*Sculptor teste(5,5,5);
+    Sculptor teste(5,5,5);
 
     teste.setColor(0,0,1,1);
     teste.putBox(1,4,2,4,3,4);
@@ -19,7 +19,7 @@ int main(){
         sculptor.setColor(0,0,1,0);
         sculptor.cutVoxel(0,0,0);
         sculptor.putSphere(10,10,10,4);
-        sculptor.setColor(1, 0, 0, 1); //??
+        sculptor.setColor(1, 0, 0, 1);
         sculptor.cutSphere(6, 6, 6, 1);
         sculptor.setColor(0, 1, 0, 1);
         sculptor.putEllipsoid(5,5,5,4,3,2);
@@ -103,9 +103,9 @@ int main(){
 
     sword.writeOFF("sword.off");
 
-    */
 
-    /*Sculptor flower(25,25,25);
+
+    Sculptor flower(25,25,25);
 
     //base
     flower.setColor(0.39,0.66,0.22,1.0);
@@ -171,7 +171,7 @@ int main(){
 
 
 
-    flower.writeOFF("flower.off");*/
+    flower.writeOFF("flower.off");
 
     Sculptor astronauta(25,25,25);
 
