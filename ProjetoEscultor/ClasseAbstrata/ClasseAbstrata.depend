@@ -3,7 +3,7 @@
 	"FiguraGeometrica.hpp"
 	<iostream>
 
-1629166358 c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\src\figurageometrica.hpp
+1629166586 c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\src\figurageometrica.hpp
 	"sculptor.hpp"
 
 1626789040 c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\src\sculptor.hpp
@@ -25,7 +25,7 @@
 	"FiguraGeometrica.hpp"
 	"ReadFromFile.hpp"
 
-1629166024 c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\src\readfromfile.hpp
+1629167148 c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\src\readfromfile.hpp
 	"FiguraGeometrica.hpp"
 	"Sculptor.hpp"
 	<fstream>
