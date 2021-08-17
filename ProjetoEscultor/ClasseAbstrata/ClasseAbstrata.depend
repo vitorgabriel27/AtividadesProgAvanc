@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1628627545 source:c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\src\figurageometrica.cpp
+	"FiguraGeometrica.hpp"
+	<iostream>
+
+1629166358 c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\src\figurageometrica.hpp
+	"sculptor.hpp"
+
+1626789040 c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\src\sculptor.hpp
+	"voxel.hpp"
+
+1626559857 c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\src\voxel.hpp
+
+1628625834 source:c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\src\sculptor.cpp
+	<cstdlib>
+	<iostream>
+	"sculptor.hpp"
+	<vector>
+	<fstream>
+	<cmath>
+
+1629165809 source:c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\src\main.cpp
+	<iostream>
+	"sculptor.hpp"
+	"FiguraGeometrica.hpp"
+	"ReadFromFile.hpp"
+
+1629166024 c:\users\vitor\onedrive\Área de trabalho\vitor t\2021.1\programaÇÃo avanÇada\atividadesprogavanc\projetoescultor\src\readfromfile.hpp
+	"FiguraGeometrica.hpp"
+	"Sculptor.hpp"
+	<fstream>
+	<iostream>
+	<sstream>
+	<string>
+	<vector>
+

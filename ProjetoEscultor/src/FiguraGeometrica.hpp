@@ -3,9 +3,9 @@
 #include "sculptor.hpp"
 
 class FiguraGeometrica{
-    protected: 
+    protected:
         int x0, y0, z0;
-    public: 
+    public:
         virtual ~FiguraGeometrica();
         virtual void draw(Sculptor &t) = 0;
 };
@@ -16,7 +16,7 @@ class PutVoxel : public FiguraGeometrica{
 
     public:
         PutVoxel(int _x0 = 0, int _y0 = 0, int _z0 = 0, float _r = 0.0, float _g = 0.0, float _b = 0.0, float _a = 1.0);
-        ~PutVoxel() {}
+        ~PutVoxel() {};
         void draw(Sculptor &t);
 };
 
@@ -89,4 +89,4 @@ class CutEllipsoid : public FiguraGeometrica{
         ~CutEllipsoid() {}
         void draw(Sculptor &t);
 };
-#endif 
+#endif
